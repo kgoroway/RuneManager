@@ -253,9 +253,7 @@ namespace RuneOptim.swar
         private void Monsters_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e) {
             switch (e.Action) {
                 case System.Collections.Specialized.NotifyCollectionChangedAction.Add:
-                    foreach (Monster mon in e.NewItems) {
-                        
-
+                    foreach (Monster mon in e.NewItems) {                       
                         if (mon.Name == null)
                         {
                             mon.Name = MonIdNames.FirstOrDefault(m => m.Key == mon.MonsterTypeId).Value;
@@ -268,9 +266,7 @@ namespace RuneOptim.swar
                         }
 
                         FindDuplicateMons(mon.MonsterTypeId);
-
                         mon.LoadOrder = monLoaded++;
-
 
                         // Add the runes contained in the Monsters JSON definition to the Rune pool
                         foreach (var r in mon.Runes) {

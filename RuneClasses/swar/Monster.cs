@@ -32,7 +32,7 @@ namespace RuneOptim.swar {
                     return HomunculusName;
                 if (MonsterTypeId == 15105) // Feels strange to need to special case this
                 {
-                    return "Devilmon"; // maybe we want to count dupes of these as well?
+                    return "Devilmon"; // maybe we want to display dupe count of these as well?
                 }
 
                 var add2A = (Awakened == 3 ? " [2A]" : "");
